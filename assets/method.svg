@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-labelledby="t d">
+  <title id="t">The method</title>
+  <desc id="d">Flow diagram. Exports leads to a local timeline, then reading and verification by agents, story prompts, an AI-guided interview, themes, and your sentence. A side branch builds a sealed data thesis, which meets your sentence at an optional Compare step.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3E8AB7"/>
+    </marker>
+  </defs>
+
+  <!-- cream card, readable on GitHub light and dark -->
+  <rect x="3" y="3" width="1194" height="454" rx="22" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="1.5" stroke-opacity="0.25"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+
+    <!-- title -->
+    <text x="47" y="34" font-size="20" font-weight="700" fill="#2C6A8C">The method</text>
+
+    <!-- main chain arrows (top row) -->
+    <g stroke="#3E8AB7" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <line x1="159" y1="107" x2="187" y2="107"/>
+      <line x1="301" y1="107" x2="329" y2="107"/>
+      <line x1="443" y1="107" x2="471" y2="107"/>
+      <line x1="585" y1="107" x2="613" y2="107"/>
+      <line x1="727" y1="107" x2="755" y2="107"/>
+      <line x1="869" y1="107" x2="897" y2="107"/>
+    </g>
+
+    <!-- branch + merge arrows (dashed = optional path) -->
+    <g stroke="#3E8AB7" stroke-width="2" fill="none" stroke-dasharray="7,5" marker-end="url(#arrow)">
+      <path d="M387,140 C387,208 600,230 600,298"/>
+      <path d="M727,328 C880,328 950,218 1039,218"/>
+      <path d="M955,140 C955,163 1097,158 1097,181"/>
+    </g>
+
+    <!-- top row nodes -->
+    <g>
+      <!-- 1 Exports -->
+      <rect x="47" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="103" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#2C6A8C">Exports</text>
+
+      <!-- 2 One timeline (local) -->
+      <rect x="189" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="245" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#2C6A8C">One timeline</text>
+      <text x="245" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#2C6A8C">(local)</text>
+
+      <!-- 3 Read & verify (agents) -->
+      <rect x="331" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="387" y="102" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">Read &amp; verify</text>
+      <text x="387" y="119" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">(agents)</text>
+
+      <!-- 4 Story prompts -->
+      <rect x="473" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="529" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">Story prompts</text>
+
+      <!-- 5 AI interview (you tell the stories) -->
+      <rect x="615" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="671" y="95" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">AI interview</text>
+      <text x="671" y="111" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">(you tell</text>
+      <text x="671" y="127" text-anchor="middle" font-size="14" font-weight="700" fill="#2C6A8C">the stories)</text>
+
+      <!-- 6 Themes -->
+      <rect x="757" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="813" y="112" text-anchor="middle" font-size="16" font-weight="700" fill="#2C6A8C">Themes</text>
+
+      <!-- 7 Your sentence -->
+      <rect x="899" y="72" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2"/>
+      <text x="955" y="103" text-anchor="middle" font-size="15" font-weight="700" fill="#2C6A8C">Your</text>
+      <text x="955" y="120" text-anchor="middle" font-size="15" font-weight="700" fill="#2C6A8C">sentence</text>
+    </g>
+
+    <!-- side branch: sealed data thesis (optional path, one pink accent) -->
+    <g>
+      <rect x="473" y="300" width="254" height="56" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2" stroke-dasharray="7,5"/>
+      <text x="600" y="322" text-anchor="middle" font-size="16" font-weight="700" fill="#2C6A8C">Data thesis</text>
+      <text x="600" y="340" text-anchor="middle" font-size="16" font-weight="700" fill="#EE5679">(sealed)</text>
+    </g>
+
+    <!-- merge node: Compare (optional) -->
+    <g>
+      <rect x="1041" y="183" width="112" height="70" rx="12" fill="#FCF7E9" stroke="#3E8AB7" stroke-width="2" stroke-dasharray="7,5"/>
+      <text x="1097" y="223" text-anchor="middle" font-size="16" font-weight="700" fill="#2C6A8C">Compare</text>
+    </g>
+
+    <!-- footer -->
+    <text x="600" y="402" text-anchor="middle" font-size="15" font-style="italic" fill="#2C6A8C">Data thesis and Compare are optional. Stories decide either way.</text>
+  </g>
+</svg>

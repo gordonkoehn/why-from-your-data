@@ -67,6 +67,26 @@ SEAL.md, PROGRESS.md
 
 Run `git init` with a whitelist `.gitignore`: ignore everything, allow only `scripts/`, `PROGRESS.md`, `SEAL.md`, `.gitignore` and `.claude/settings.json`. Parsers read my identity and exclusion terms from `private/` at runtime. Never hard-code them.
 
+## Privacy
+
+Parsing and storage stay local. The coding agent is a cloud model: what it reads goes to the provider. A local model can do the reading instead (weaker, untested here). Interviews go to the cloud either way.
+
+| Phase | What reaches the model provider |
+|---|---|
+| 0 to 2: consent, inventory, parsers | my answers; folder names and counts; export structure; sample rows only after a yes |
+| 3: slices | nothing |
+| 4 to 6: reading, timeline, thesis | every slice read; `profile.md`; any file an agent opens. Nothing with a local model. |
+| 7, 8: interviews, themes | everything I say; my stories |
+| 9: compare | slices, extractions, thesis, stories, themes |
+
+The seal posts one hash per stage. It reveals nothing.
+
+**Defaults.** Own lines only from chats and mail, quoted replies stripped. Search history stays local. Money off. Pseudonyms for people. I can change each one, per source, in phase 0.
+
+**What I should know.** A pseudonym doesn't anonymise. The people in my data never agreed to this. Exclusion filters miss things: spot-check them. A deny rule is a guard; moving or encrypting files is the lock. My provider's data terms apply.
+
+**Before I share anything:** aggregates only. Scan each file against a local list of the names and places in my data. Never push the working folder.
+
 ---
 
 ## Phase 0. Consent
@@ -86,13 +106,13 @@ Ask one at a time. Answers go to `private/consent.md`. Defaults in bold.
 11. **Languages and time zones.** Quotes stay in the original, with a translation.
 12. **Profile:** `private/profile.md`, my eras with neutral labels ("school", "first job") and years. It goes into every reading prompt.
 
-Then tell me what leaves my machine in each phase (`kit/README.md`).
+Then tell me what leaves my machine in each phase (Privacy, above).
 
 **CHECKPOINT.** Show `consent.md` and `profile.md`.
 
 ## Phase 1. Inventory
 
-Summarise `exports/` by folder: service, file types, counts, size, date range. Never list chat files or folder names: they are named after people. Then say what is missing and how to request it:
+Summarise `exports/` by folder: service, file types, counts, size, date range. Never list chat files or folder names: they are named after people. Then say what is missing and how to request it. [kit/SOURCES.md](SOURCES.md) has the request links per service and a good first set to request.
 
 - **Own words, best first:** journals and notes; sent mail (Google Takeout, any mbox); chats (Meta "Download your information" as JSON, WhatsApp per chat); posts (X, LinkedIn, old blogs); AI chat exports; code repos; old school files. Early years are thin. Ask me.
 - **Traces:** calendar `.ics`; photo dates; Google "My Activity" (search, YouTube, Maps); Spotify, Amazon, Kindle.
