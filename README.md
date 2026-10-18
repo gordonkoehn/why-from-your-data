@@ -34,6 +34,8 @@ It is not a Why generator. It is not therapy.
 
 **Tokens.** It depends on how much you feed in. Start with two or three sources. The agent runs a pilot. The pilot is your estimate.
 
+**Models.** Most agents are readers and verifiers. Run them on a mid-tier or small model and keep the strongest model for the few judgement jobs: the skeptic, the sealed thesis, the comparison and the interviews (see `PROMPT.md`, Model choice). My own run used one top model for everything, which is the expensive way.
+
 **One person's run.** A labelled example, not a benchmark:
 
 > From 340,946 timestamped records (22 sources, 2011 to 2026), 173 Claude agents in 8 analysis runs worked through 66 text slices. All 6,605 evidence quotes were found in their source (91% at an unambiguous locator), yet verifier agents changed or dropped 39% of the extracted items (95% CI 37 to 42%, clustered by slice). $533 at API list price.

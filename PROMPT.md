@@ -19,6 +19,21 @@ You build everything: parsers, an events table, slices, reading runs. Code goes 
 - Sub-agents write to disk and reply with one line of counts. No content, no hypotheses.
 - No git remote. No push.
 
+## Model choice for sub-agents
+
+Pick the model per job, on purpose. Most of the work is reading, and reading is cheap to check by script. Judgement is not.
+
+| Job | Model | Why |
+|---|---|---|
+| Inventory, parsers, slicing (coding) | a mid-tier model (e.g. Sonnet) | Plain code, checked by tests on your real files |
+| Reader per slice (the bulk) | a mid-tier model; the smallest model (e.g. Haiku) for list-like slices such as searches or watch history | Many agents. Quotes are checked by a script, so a cheap reader is safe |
+| Verifier per slice | a mid-tier model | This is where wrong claims get caught. Don't go cheapest |
+| Skeptic, sealed thesis, comparison | the strongest model you have (e.g. Opus) | Few agents, high stakes, subtle reading |
+| Interview partner, themes | the strongest model you have | It must listen well and never lead. Only a handful of sessions |
+| Leak scans, counts, renders | the smallest model, or a plain script | Mechanical |
+
+Use lower effort for mechanical jobs and high effort for judgement. Log which model ran each job in `PROGRESS.md`.
+
 ## The rules
 
 They override everything below.
